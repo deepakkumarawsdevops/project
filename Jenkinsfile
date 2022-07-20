@@ -7,7 +7,10 @@ pipeline {
             steps {                                                
 			                                                       
                 echo 'Building.'
-		sh 'mvn install'
+		sh 'whoami'
+		sh 'uname'
+		sh 'cat /etc-os-release'
+		sh 'pwd'
             }
         }
 		
@@ -16,7 +19,7 @@ pipeline {
         stage('Test') {
             steps {                                                  
                 echo 'Testing..'
-		sh 'mvn test'
+		
             }
         }
         stage('Deploy') {                                           
