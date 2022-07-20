@@ -9,7 +9,7 @@ pipeline {
                 echo 'Building.'
 		sh 'whoami'
 		sh 'uname'
-		sh 'cat /etc-os-release'
+		sh 'cat /etc/os-release'
 		sh 'pwd'
             }
         }
