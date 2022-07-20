@@ -11,6 +11,8 @@ pipeline {
 		sh 'uname'
 		sh 'cat /etc/os-release'
 		sh 'pwd'
+		sh 'echo "Default Path - $PWD"'
+		sh ' echo "Success"'
             }
         }
 		
