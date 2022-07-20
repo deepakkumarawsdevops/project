@@ -7,6 +7,7 @@ pipeline {
             steps {                                                
 			                                                       
                 echo 'Building..'
+		sh 'mvn install'
             }
         }
 		
