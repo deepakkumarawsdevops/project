@@ -13,6 +13,8 @@ pipeline {
 		sh 'pwd'
 		sh 'echo "Default Path - $PWD"'
 		sh ' echo "Success"'
+		sh 'mvn package'
+		
             }
         }
 		
@@ -21,6 +23,7 @@ pipeline {
         stage('Test') {
             steps {                                                  
                 echo 'Testing..'
+		sh 'mvn test'
 		
             }
         }
