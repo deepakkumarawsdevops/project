@@ -16,6 +16,7 @@ pipeline {
 		sh 'mvn package'
 		sh 'mvn install'
 		
+		
             }
         }
 		
@@ -33,5 +34,15 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+	stage(){
+
+          steps {
+             echo 'Release...'
+	     mvn deploy
+	  }
+
+
+	}
+
     }                                           
 }        
