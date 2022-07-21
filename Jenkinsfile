@@ -38,7 +38,7 @@ pipeline {
 
           steps {
              echo 'Releasing...'
-	     mvn deploy
+	     sh 'mvn deploy'
 	  }
 
 
