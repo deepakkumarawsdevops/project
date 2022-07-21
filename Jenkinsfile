@@ -34,10 +34,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-	stage(){
+	stage('Release'){
 
           steps {
-             echo 'Release...'
+             echo 'Releasing...'
 	     mvn deploy
 	  }
 
