@@ -40,7 +40,7 @@ pipeline {
 
           steps {
              echo 'Releasing...'
-	     sh 'mvn deploy'
+	     sh 'mvn clean deploy'
 	  }
 
 
