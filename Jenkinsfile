@@ -14,6 +14,7 @@ pipeline {
 		sh 'echo "Default Path - $PWD"'
 		sh ' echo "Success"'
 		sh 'mvn package'
+		sh 'mvn install'
 		
             }
         }
