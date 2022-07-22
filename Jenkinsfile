@@ -27,7 +27,7 @@ pipeline {
         stage('Test') {
             steps {                                                  
                 echo 'Testing..'
-		mvn clean test
+		sh 'mvn clean test'
 		
 		
             }
@@ -35,7 +35,7 @@ pipeline {
         stage('Release') {                                           
             steps {
                 echo 'Releasing....'
-		mvn clean deploy
+		sh 'mvn clean deploy'
 
             }
         }
