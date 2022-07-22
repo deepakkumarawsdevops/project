@@ -11,11 +11,11 @@ pipeline {
 		sh 'uname'
 		sh 'cat /etc/os-release'
 		sh 'pwd'
-		sh 'echo "Default Path->"'$PWD
-		sh 'echo "testing "' on $HOSTNAME
+		sh 'echo "Default Path:"$PWD'
+		sh 'echo "testing " on $HOSTNAME'
 		sh ' echo "Success"'
-		sh 'mvn package'
-		sh 'mvn install'
+		
+		
 		
 		
             }
@@ -26,7 +26,7 @@ pipeline {
         stage('Test') {
             steps {                                                  
                 echo 'Testing..'
-		sh 'mvn test'
+		
 		
             }
         }
