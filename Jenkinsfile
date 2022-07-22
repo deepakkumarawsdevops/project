@@ -14,7 +14,8 @@ pipeline {
 		sh 'echo "Default Path:"$PWD'
 		sh 'echo "testing " on $HOSTNAME'
 		sh ' echo "Success"'
-		
+	        sh 'mvn clean package'
+		sh 'mvn clean install'
 		
 		
 		
@@ -26,22 +27,23 @@ pipeline {
         stage('Test') {
             steps {                                                  
                 echo 'Testing..'
+		mvn clean test
 		
 		
             }
         }
-        stage('Deploy') {                                           
+        stage('Release') {                                           
             steps {
-                echo 'Deploying....'
-		
+                echo 'Releasing....'
+		mvn clean deploy
 
             }
         }
-	stage('Release'){
+	stage('Deploying'){
 
           steps {
-             echo 'Releasing...'
-	     sh 'mvn clean deploy'
+             echo 'Deploying...'
+	     
 	  }
 
 
